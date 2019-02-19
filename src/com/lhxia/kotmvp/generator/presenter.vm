@@ -1,0 +1,12 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}
+
+#end
+import com.lhxia.kotmvp.core.BasePresenter
+import kotlin.coroutines.CoroutineContext
+import kotlin.coroutines.EmptyCoroutineContext
+
+class ${ModuleName}PresenterImpl(override val view : ${ModuleName}Contract.${ModuleName}View, parentCoroutineContext: CoroutineContext = EmptyCoroutineContext)
+: BasePresenter(view, parentCoroutineContext), ${ModuleName}Contract.${ModuleName}Presenter {
+
+    //TODO
+}

@@ -1,0 +1,16 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}
+
+#end
+import android.os.Bundle
+import com.lhxia.kotmvp.core.BaseMPVActivity
+import ${APP_PACKAGE_NAME}.R
+
+class ${ModuleName}Activity : BaseMPVActivity<${ModuleName}Contract.${ModuleName}Presenter>(), ${ModuleName}Contract.${ModuleName}View {
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setPresenter(${ModuleName}PresenterImpl(this, coroutineContext))
+        setContentView(R.layout.activity_${ModuleNameLowerCase})
+    }
+}

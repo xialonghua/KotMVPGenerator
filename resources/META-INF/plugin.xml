@@ -1,0 +1,36 @@
+<idea-plugin>
+  <id>com.lhxia.kotmvp.generator</id>
+  <name>KotMVP Generator</name>
+  <version>1.0</version>
+  <vendor email="xialonghua@vip.qq.com" url="http://51hotmm.com">51hotmm.com</vendor>
+
+  <description><![CDATA[
+      因为Android Studio无法同时创建多个文件模板，因此开发这个插件帮助KotMVP框架生成MVP初始文件。方便开发
+    ]]></description>
+
+  <change-notes><![CDATA[
+      v0.0.1: 因为Android Studio无法同时创建多个文件模板，因此开发这个插件帮助KotMVP框架生成MVP初始文件。方便开发
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="CreateMVP" class="com.lhxia.kotmvp.generator.CreateMVP" text="CreateMVP">
+      <add-to-group group-id="NewGroup" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>

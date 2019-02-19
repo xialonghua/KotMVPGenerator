@@ -1,0 +1,25 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}
+
+#end
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import ${PACKAGE_NAME}.${ModuleName}Contract
+import ${PACKAGE_NAME}.${ModuleName}PresenterImpl
+import ${APP_PACKAGE_NAME}.R
+import com.lhxia.kotmvp.core.BaseMPVFragment
+
+
+class ${ModuleName}Fragment: BaseMPVFragment<${ModuleName}Contract.${ModuleName}Presenter>(), ${ModuleName}Contract.${ModuleName}View {
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_${ModuleNameLowerCase}, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        setPresenter(${ModuleName}PresenterImpl(this, coroutineContext))
+    }
+}

@@ -1,0 +1,10 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}
+
+#end
+import com.lhxia.kotmvp.core.Contract
+
+interface ${ModuleName}Contract {
+
+    interface ${ModuleName}Presenter: Contract.Presenter
+    interface ${ModuleName}View: Contract.View<${ModuleName}Presenter>
+}
